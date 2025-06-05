@@ -9,7 +9,7 @@ const Tours = () => {
   useEffect(() => {
     const fetchTours = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/tours");
+        const response = await axios.get("https://beachify-final-backend.onrender.com/api/tours");
         setTours(response.data);
       } catch (error) {
         console.error("Error fetching tours:", error);
