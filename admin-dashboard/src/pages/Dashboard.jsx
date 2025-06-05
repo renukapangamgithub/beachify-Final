@@ -5,7 +5,7 @@ import ChatHeader from '../components/ChatHeader';
 import ChatMessages from '../components/ChatMessages';
 import ChatInput from '../components/ChatInput';
 
-const SOCKET_SERVER_URL = 'http://localhost:5000';
+const SOCKET_SERVER_URL = 'https://beachify-final-backend.onrender.com';
 
 const Dashboard = () => {
   const [conversations, setConversations] = useState({});
