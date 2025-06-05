@@ -37,7 +37,7 @@ const HotelList = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const BASE_URL = 'http://localhost:5000/api/hotels';
+  const BASE_URL = 'https://beachify-final-backend.onrender.com/api/hotels';
 
   const enrichHotelsWithGeocode = async (hotelList) => {
     return await Promise.all(
