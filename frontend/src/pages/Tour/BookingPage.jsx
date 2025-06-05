@@ -16,7 +16,7 @@ const BookingPage = () => {
       const userId = "6629c1b8d03e2f5a8d4c67b3"; // 🔁 Replace with actual user ID from auth
       const amount = 5000; // Optional: fetch actual tour price dynamically
 
-      const { data } = await axios.post("http://localhost:5000/api/stripe/create-checkout-session", {
+      const { data } = await axios.post("https://beachify-final-backend.onrender.com/api/stripe/create-checkout-session", {
         tourId,
         userId,
         amount,
