@@ -19,14 +19,14 @@ const SearchBar = () => {
       setLoading(true);
       // Call your backend API with `state` = location
       const response = await axios.get(
-        "http://localhost:5000/api/indianbeaches/search",
-        {
-          params: {
-            state: location.trim(),
-            q: "", // optionally, you could add beach name here
-          },
-        }
-      );
+  "https://beachify-final-backend.onrender.com/api/indianbeaches/search",
+  {
+    params: {
+      state: location.trim(),
+      q: "",
+    },
+  }
+);
       setBeaches(response.data);
     } catch (error) {
       console.error("Error fetching beaches:", error);
