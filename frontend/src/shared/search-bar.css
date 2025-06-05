@@ -1,0 +1,160 @@
+.search__bar {
+    background: #fff;
+    padding: 20px 30px;  /* Increased padding */
+    border-radius: 60px; /* Slightly larger radius */
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* Increased width */
+    margin: auto;
+}
+  
+.search__form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px; /* Increased gap */
+}
+  
+.form__group {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Increased gap */
+    background: #f8f8f8;
+    padding: 15px 20px; /* Increased padding */
+    border-radius: 12px;
+    flex: 1;
+}
+  
+.form__group .icon {
+    color: #0084ff;
+    font-size: 1.5rem;  /* Increased icon size */
+}
+  
+.form__group h6 {
+    margin: 0;
+    font-size: 1rem; /* Slightly larger text */
+    font-weight: 600;
+}
+  
+.form__group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem; /* Increased input text size */
+}
+  
+.search__icon {
+    background: #0084ff;
+    border: none;
+    padding: 15px; /* Increased padding */
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem; /* Increased search icon size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+}
+  
+.search__icon:hover {
+    background: #0084ff;
+}
+.search__bar {
+  background: #fff;
+  padding: 20px 30px;  /* Your increased padding */
+  border-radius: 60px; /* Slightly larger radius */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px; /* Increased width */
+  margin: auto;
+  /* Added flex-wrap for smaller screens */
+  flex-wrap: wrap;
+}
+
+.search__form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 15px; /* Increased gap */
+  flex-wrap: wrap; /* Allow wrapping on smaller devices */
+}
+
+/* Changed from div.form__group to class form__group (no longer inside FormGroup) */
+.form__group {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased gap */
+  background: #f8f8f8;
+  padding: 15px 20px; /* Increased padding */
+  border-radius: 12px;
+  flex: 1 1 200px; /* Flex grow and min width for responsiveness */
+  min-width: 200px;
+}
+
+.form__group .icon {
+  color: #0084ff;
+  font-size: 1.5rem;  /* Increased icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__group h6 {
+  margin: 0;
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 600;
+}
+
+.form__group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem; /* Increased input text size */
+}
+
+.search__icon {
+  background: #0084ff;
+  border: none;
+  padding: 15px; /* Increased padding */
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem; /* Increased search icon size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.search__icon:hover {
+  background: #005bb5; /* Slightly darker on hover */
+}
+
+/* Optional: style for beach results container */
+.beach-results {
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.beach-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.beach-card img {
+  width: 100%;
+  border-radius: 8px;
+}

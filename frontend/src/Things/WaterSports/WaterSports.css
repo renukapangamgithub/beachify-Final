@@ -1,0 +1,221 @@
+/* Water Sports Container */
+.watersports-container {
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f8ff, #d4f1f9);
+    padding-bottom: 50px;
+    margin-top: -100px;
+}
+
+/* Hero Video Section */
+.hero-video-container {
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-overlay p {
+    font-size: 1.3rem;
+    max-width: 600px;
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #022c43;
+    margin-top: 50px;
+}
+
+/* Water Sports List */
+.sports-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items in the first row */
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* Adjust second row */
+.sport-card:nth-child(4),
+.sport-card:nth-child(5) {
+    grid-column: span 1; /* Ensure two items in the second row */
+}
+
+/* Individual Sport Card */
+.sport-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* Style for "Famous At" paragraph */
+.sport-card p strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #02577a; /* Oceanic Blue */
+    margin-top: 8px;
+    padding: 5px 0;
+    border-top: 2px solid #02577a;
+}
+
+
+.sport-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sport Images */
+.sport-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sport Titles */
+.sport-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #022c43;
+}
+
+/* Sport Description */
+.sport-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: #1b263b;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff7f50;
+}
+
+.faq-item {
+    background: #162447;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    background: #23395d;
+}
+
+.faq-item h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.icon {
+    transition: transform 0.3s;
+}
+
+.icon.open {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.9;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Smooth fade-in animation for FAQ answers */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sports-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+
+    .sport-card:nth-child(4),
+    .sport-card:nth-child(5) {
+        grid-column: span 1; /* Ensure they remain two per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.1rem;
+    }
+
+    .sports-list {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .sport-card:nth-child(n+4) {
+        grid-column: span 1; /* Reset for small screens */
+    }
+
+    .faq-section {
+        width: 90%;
+    }
+}

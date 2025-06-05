@@ -1,0 +1,136 @@
+/* Container */
+.sport-detail-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Title */
+.sport-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Layout using Flexbox */
+.sport-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Image on the Right */
+.sport-image-container {
+    flex-shrink: 0;
+}
+
+.sport-detail-image {
+    width: 280px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sport-detail-image:hover {
+    transform: scale(1.05);
+}
+
+/* Sport Information */
+.sport-description {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.sport-location {
+    font-size: 16px;
+    font-weight: bold;
+    color: #005f89;
+}
+
+/* Tips Section */
+.sport-tips-title {
+    font-size: 22px;
+    color: #ff6600;
+    margin-top: 15px;
+}
+
+.sport-tips-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sport-tip {
+    background: #e0f7fa;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.sport-tip:hover {
+    background: #b2ebf2;
+}
+
+/* Back Button */
+.back-button {
+    display: block;
+    width: 180px;
+    padding: 12px;
+    background: #0077b6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.back-button:hover {
+    background: #005f89;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .sport-detail-container {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .sport-content {
+    text-align: center;
+  }
+
+  .sport-title {
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .sport-detail-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+  .back-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

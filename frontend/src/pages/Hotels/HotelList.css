@@ -1,0 +1,61 @@
+/* New wrapper with padding-top for navbar */
+.hotel-list__wrapper {
+  padding-top: 100px; /* Adjust this to match navbar height */
+}
+
+.hotel-list {
+  max-width: 600px;
+  margin: 0 auto 90px;
+  font-family: Arial, sans-serif;
+}
+
+.hotel-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.hotel-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hotel-list__item {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hotel-list__item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-list__item h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.hotel-list__item p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.hotel-list__loading,
+.hotel-list__error,
+.hotel-list__empty {
+  text-align: center;
+  margin: 30px 0;
+  color: #666;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .hotel-list {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+}

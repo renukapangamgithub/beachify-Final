@@ -1,0 +1,116 @@
+/* Service Section - Flex Container */
+.service__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 50px;
+}
+
+/* Title Container */
+.service__title-container {
+    flex: 1;
+    min-width: 250px;
+    margin-left: 70px; /* Prevents title from being too small */
+}
+
+.services__subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0084ff;
+    background: rgba(255, 165, 0, 0.1);
+    margin-bottom: 5px;
+    
+}
+
+.services__title {
+    font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+    color: #050505;
+    margin-bottom: 0;
+}
+
+/* Services List */
+.service__list {
+    display: flex;
+    flex: 2; /* Takes more space than the title */
+    justify-content: center;
+   
+    flex-wrap: wrap;
+}
+
+/* Individual Service Item */
+.service__item {
+    padding: 1.5rem;
+    border-right: 1px solid rgba(250, 168, 53, 0.52);  /* Right border only */
+    border-bottom: 1px solid rgba(250, 168, 53, 0.52); /* Bottom border only */
+    border-left: none;  /* No left border */
+    border-top: none;   /* No top border */
+    border-radius: 0 10px 10px 0; /* Slightly rounded corners on right side */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+}
+
+.service__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Icon Styling */
+.service__img {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0084ff;
+    padding: 0.8rem;
+    margin: 0 auto 1rem auto;
+}
+
+.service__img img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Service Title */
+.service__item h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Service Description */
+.service__item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+.service__item-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .service__title-container {
+    margin-left: 20px;
+    min-width: auto;
+  }
+}
+

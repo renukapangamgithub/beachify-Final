@@ -1,0 +1,182 @@
+/* Full Page Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding-top: 80px; /* Push content below the navbar */
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Box */
+.contact-box {
+    display: flex;
+    width: 60%; /* Reduced width */
+    max-width: 750px; /* Made it smaller */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Ensure it adapts for smaller screens */
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Left Side - Dog Image */
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #e0f7fa;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 400px; /* Increased size */
+    height: auto;
+    border-radius: 10px;
+    animation: floatUpDown 3s ease-in-out infinite; /* Apply animation */
+}
+
+/* Right Side - Contact Form */
+.contact-form {
+    flex: 1;
+    padding: 1.5rem; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Title */
+.contact-title {
+    font-size: 1.6rem; /* Slightly reduced */
+    font-weight: bold;
+    color: #022c43;
+    margin-bottom: 1rem;
+}
+
+.contact-title span {
+    color: #00a8cc;
+}
+
+/* Input Group */
+.input-group {
+    text-align: left;
+    margin-bottom: 0.8rem; /* Reduced margin */
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 8px; /* Slightly reduced */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #00a8cc;
+    outline: none;
+}
+
+/* Send Message Button */
+.contact-button {
+    width: 100%;
+    padding: 8px; /* Reduced button size */
+    background: #00a8cc;
+    color: white;
+    font-size: 0.9rem; /* Slightly smaller */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #007ea7;
+}
+
+/* Contact Info */
+.form-footer {
+    margin-top: 0.8rem; /* Reduced margin */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-footer p {
+    margin: 4px 0;
+}
+
+.form-footer a {
+    color: #00a8cc;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Fix - Ensure it stays above other elements */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Ensure it has a background */
+    z-index: 1000; /* Higher than other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-box {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact-image {
+        height: 180px; /* Increased image container height */
+    }
+
+    .contact-image img {
+        max-width: 200px; /* Slightly larger dog image */
+    }
+
+    .contact-form {
+        padding: 1rem; /* Adjusted padding */
+    }
+
+    .contact-title {
+        font-size: 1.4rem; /* Adjusted font size */
+    }
+
+    .contact-button {
+        font-size: 0.85rem;
+    }
+}

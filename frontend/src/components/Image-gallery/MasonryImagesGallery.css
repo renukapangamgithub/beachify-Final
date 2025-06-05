@@ -1,0 +1,164 @@
+.masonry-gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow-x: hidden; /* prevent horizontal scroll */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-subtitle {
+    display: inline-block;
+    background: #0084ff; /* Beachy blue color */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #11367a;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Masonry layout container */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.masonry__img {
+  width: 100%;
+  max-width: 300px; /* or your original max size */
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* For small screens: reduce image size */
+@media (max-width: 768px) {
+  .masonry__img {
+    max-width: 150px;  /* smaller max width on smaller devices */
+    width: 90%;        /* smaller width relative to container */
+  }
+}
+
+.masonry__img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.choose-file-btn,
+.upload-btn {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    white-space: nowrap;
+    flex: 1 1 150px; /* allow buttons to shrink and grow */
+    max-width: 200px;
+    text-align: center;
+}
+
+.choose-file-btn:hover,
+.upload-btn:hover:not(:disabled) {
+    background-color: #005fa3;
+}
+
+.upload-btn {
+    background-color: #28a745;
+}
+
+.upload-btn:hover:not(:disabled) {
+    background-color: #1e7e34;
+}
+
+.upload-btn:disabled {
+    background-color: #94d3a2;
+    cursor: not-allowed;
+}
+
+.choose-file-btn:focus,
+.upload-btn:focus {
+    outline: 2px solid #005fa3;
+    outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+    .gallery-title {
+        font-size: 2rem;
+    }
+    
+    .gallery-subtitle {
+        font-size: 0.9rem;
+        padding: 6px 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-gallery {
+        padding: 30px 10px;
+    }
+
+    .gallery-title {
+        font-size: 1.8rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .upload-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .choose-file-btn,
+    .upload-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+        max-width: 100%;
+        flex: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+}

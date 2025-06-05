@@ -1,0 +1,29 @@
+# Node modules
+**/node_modules/
+
+# Logs
+**/logs/
+*.log
+
+# Builds
+**/dist/
+**/build/
+.next/
+out/
+.cache/
+
+# Env
+**/.env
+**/.env.*
+
+# IDE/editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Coverage/testing
+coverage/
+
+# OS
+.DS_Store
