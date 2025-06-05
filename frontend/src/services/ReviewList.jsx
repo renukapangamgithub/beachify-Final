@@ -14,7 +14,7 @@ const ReviewList = ({ serviceType, limit, onCommentClick }) => {
   // Fetch reviews
   const fetchReviews = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/reviews/${serviceType}`);
+      await axios.get(`https://beachify-final-backend.onrender.com/api/reviews/${serviceType}`);
       const sortedReviews = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       setReviews(sortedReviews);
     } catch (err) {
@@ -34,7 +34,7 @@ const ReviewList = ({ serviceType, limit, onCommentClick }) => {
     setSubmitting(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/reviews', {
+        const res = await axios.post('https://beachify-final-backend.onrender.com/api/reviews', {
         username,
         message,
         rating,
