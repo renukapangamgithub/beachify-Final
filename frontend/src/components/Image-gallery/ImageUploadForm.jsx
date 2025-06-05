@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+const BACKEND_URL = 'https://beachify-final-backend.onrender.com';
 const ImageUploadForm = ({ onUploadSuccess }) => {
   const [file, setFile] = useState(null);
 
@@ -16,7 +16,7 @@ const ImageUploadForm = ({ onUploadSuccess }) => {
     formData.append('image', file);
 
     try {
-      await axios.post('http://localhost:5000/api/gallery/upload', formData, {
+     await axios.post(`${BACKEND_URL}/api/gallery/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
