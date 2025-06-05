@@ -3,13 +3,13 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import './MasonryImagesGallery.css';  
 import axios from 'axios';
 import ImageUploadForm from './ImageUploadForm';
-
+const BACKEND_URL = 'https://beachify-final-backend.onrender.com';
 const MasonryImagesGallery = () => {
   const [images, setImages] = useState([]);
 
   const fetchImages = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/gallery');
+       const res = await axios.get(`${BACKEND_URL}/api/gallery`);
       setImages(res.data);
     } catch (err) {
       console.error("Error fetching images", err);
