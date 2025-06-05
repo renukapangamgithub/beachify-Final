@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
 
-const SOCKET_SERVER_URL = 'http://localhost:5000';  // Adjust if needed
+const SOCKET_SERVER_URL = 'https://beachify-final-backend.onrender.com';  // Adjust if needed
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
