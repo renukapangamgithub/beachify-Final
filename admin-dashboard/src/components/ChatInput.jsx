@@ -1,34 +1,8 @@
-import React, { useState } from 'react';
-import { Picker } from 'emoji-mart';
-import 'emoji-mart/css/emoji-mart.css';
+import React from 'react';
 
 const ChatInput = ({ text, setText, sendMessage }) => {
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-
   return (
-    <div className="relative border-t px-6 py-4 bg-white flex items-center gap-3">
-      {/* Emoji button */}
-      <button
-        onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-        className="text-2xl"
-        type="button"
-        aria-label="Toggle emoji picker"
-      >
-        😊
-      </button>
-
-      {/* Emoji Picker */}
-      {showEmojiPicker && (
-        <div className="absolute bottom-16 left-0 z-50">
-          <Picker
-            onSelect={(emoji) => {
-              setText((prev) => prev + emoji.native);
-              setShowEmojiPicker(false);
-            }}
-          />
-        </div>
-      )}
-
+    <div className="border-t px-6 py-4 bg-white flex items-center gap-3">
       {/* Input */}
       <input
         type="text"
