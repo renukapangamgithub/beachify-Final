@@ -12,17 +12,18 @@ const ReviewList = ({ serviceType, limit, onCommentClick }) => {
   const [submitting, setSubmitting] = useState(false);
 
   // Fetch reviews
-  const fetchReviews = async () => {
-    try {
-      await axios.get(`https://beachify-final-backend.onrender.com/api/reviews/${serviceType}`);
-      const sortedReviews = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      setReviews(sortedReviews);
-    } catch (err) {
-      console.error("Failed to fetch reviews:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+ const fetchReviews = async () => {
+  try {
+    const response = await axios.get(`https://beachify-final-backend.onrender.com/api/reviews/${serviceType}`);
+    const sortedReviews = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    setReviews(sortedReviews);
+  } catch (err) {
+    console.error("Failed to fetch reviews:", err);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   useEffect(() => {
     fetchReviews();
