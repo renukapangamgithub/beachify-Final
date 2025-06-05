@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.css";
+import "./Home.css";
 import { Container, Row, Col } from "reactstrap";
 
 import heroImg from "../../assets/images/hero-img01.jpg";
