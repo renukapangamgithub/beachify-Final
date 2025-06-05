@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_BASE = "http://localhost:5000/api/indianbeaches/search";
+const API_BASE = "https://beachify-final-backend.onrender.com/api/indianbeaches/search";
 
 function Beaches() {
   const [query, setQuery] = useState("");
