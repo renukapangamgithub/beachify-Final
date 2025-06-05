@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Button } from "reactstrap";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import "./navbar.css";
+import "./Navbar.css";
 
 const navLinks = [
   {
